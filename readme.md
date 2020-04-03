@@ -14,8 +14,3 @@ For this publication we performed four computational experiments. In the folder 
 ## Installation
 Spatiotemporal simulations were performed with [MCell](https://mcell.org/) (version 3.4). The corresponding ODEs were integrated with [PyDSTool version 0.88](https://pydstool.github.io/PyDSTool/FrontPage.html), and the following python libraries were also use for analysis and to produce the figures: [numpy 1.18.1](https://numpy.org/) and [matplotlib 3.2.0](https://matplotlib.org/).
 
-## License
-![](https://licensebuttons.net/l/by/3.0/88x31.png)
-
-All creative works (writing, figures, etc) are licensed under the [Creative
-Commons CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) license. All software is distributed under the standard MIT license as follows
