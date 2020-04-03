@@ -1,0 +1,199 @@
+INCLUDE_FILE = "Scene.parameters.mdl"
+
+CHECKPOINT_OUTFILE = "chkpt_s10_1"
+CHECKPOINT_REALTIME = 5:0:0:0
+ITERATIONS = 1e8
+TIME_STEP = 1e-9
+VACANCY_SEARCH_DISTANCE = 10
+
+INCLUDE_FILE = "Scene.initialization.mdl"
+
+PARTITION_X = [[-0.400000005960464 TO 0.400000005960464 STEP 0.00999999977648258]]
+PARTITION_Y = [[-0.349999994039536 TO 0.349999994039536 STEP 0.00999999977648258]]
+PARTITION_Z = [[-0.400000005960464 TO 0.400000005960464 STEP 0.00999999977648258]]
+
+INCLUDE_FILE = "Scene.molecules.mdl"
+
+INCLUDE_FILE = "Scene.surface_classes.mdl"
+
+INCLUDE_FILE = "Scene.reactions.mdl"
+
+INCLUDE_FILE = "Scene.geometry_syn_resc.mdl"
+
+INCLUDE_FILE = "Scene.mod_surf_regions.mdl"
+
+INSTANTIATE Scene OBJECT
+{
+  inner_with_cristae_final OBJECT inner_with_cristae_final {}
+  outer_membrane_final OBJECT outer_membrane_final {}
+  syn OBJECT syn {}
+  rel_d_m RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[ALL]
+   MOLECULE = D
+   NUMBER_TO_RELEASE = rel_d_mo
+   RELEASE_PROBABILITY = 1
+  }
+  rel_eo RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = Eo'
+   NUMBER_TO_RELEASE = rel_eo_mo
+   RELEASE_PROBABILITY = 1
+  }
+  rel_t_m RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[ALL]
+   MOLECULE = T
+   NUMBER_TO_RELEASE = rel_t_mo
+   RELEASE_PROBABILITY = 1
+  }
+  rel_l RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = L'
+   NUMBER_TO_RELEASE = lo
+   RELEASE_PROBABILITY = 1
+  }
+  rel_d_ims RELEASE_SITE
+  {
+   SHAPE = Scene.outer_membrane_final[ALL] - Scene.inner_with_cristae_final[ALL]
+   MOLECULE = D
+   NUMBER_TO_RELEASE = rel_d_ims
+   RELEASE_PROBABILITY = 1
+  }
+  rel_t_ims RELEASE_SITE
+  {
+   SHAPE = Scene.outer_membrane_final[ALL] - Scene.inner_with_cristae_final[ALL]
+   MOLECULE = T
+   NUMBER_TO_RELEASE = rel_t_ims
+   RELEASE_PROBABILITY = 1
+  }
+  rel_p RELEASE_SITE
+  {
+   SHAPE = Scene.outer_membrane_final[ALL]
+   MOLECULE = porin'
+   NUMBER_TO_RELEASE = den_porin
+   RELEASE_PROBABILITY = 1
+  }
+  rel_ld RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = LD'
+   NUMBER_TO_RELEASE = rel_ld
+   RELEASE_PROBABILITY = 1
+  }
+  rel_lt RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = LT'
+   NUMBER_TO_RELEASE = rel_lt
+   RELEASE_PROBABILITY = 1
+  }
+  rel_tl RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = TL'
+   NUMBER_TO_RELEASE = rel_tl
+   RELEASE_PROBABILITY = 1
+  }
+  rel_dlt RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = DLT'
+   NUMBER_TO_RELEASE = rel_dlt
+   RELEASE_PROBABILITY = 1
+  }
+  rel_tld RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = TLD'
+   NUMBER_TO_RELEASE = rel_tld
+   RELEASE_PROBABILITY = 1
+  } 
+  rel_tlt RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = TLT'
+   NUMBER_TO_RELEASE = rel_tlt
+   RELEASE_PROBABILITY = 1
+  }
+
+ rel_ei RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = DLD'
+   NUMBER_TO_RELEASE = rel_ei
+   RELEASE_PROBABILITY = 1
+  }
+rel_h3eo RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = H3Eo'
+   NUMBER_TO_RELEASE = rel_h3eo
+   RELEASE_PROBABILITY = 1
+  }
+  rel_h3e RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = H3E'
+   NUMBER_TO_RELEASE = rel_h3e
+   RELEASE_PROBABILITY = 1
+  }
+rel_eh3 RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = EH3'
+   NUMBER_TO_RELEASE = rel_eh3
+   RELEASE_PROBABILITY = 1
+  }
+rel_h3es RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = H3ES'
+   NUMBER_TO_RELEASE = rel_h3es
+   RELEASE_PROBABILITY = 1
+  }
+
+rel_dld RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = DLD'
+   NUMBER_TO_RELEASE = rel_dld
+   RELEASE_PROBABILITY = 1
+  }
+rel_dldp RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = DLDp'
+   NUMBER_TO_RELEASE = rel_dldp
+   RELEASE_PROBABILITY = 1
+  }
+  rel_dl RELEASE_SITE
+  {
+   SHAPE = Scene.inner_with_cristae_final[curva]
+   MOLECULE = DL'
+   NUMBER_TO_RELEASE = rel_dl
+   RELEASE_PROBABILITY = 1
+  }
+
+ rel_t_syn RELEASE_SITE
+  {
+   SHAPE = Scene.syn[ALL] - Scene.outer_membrane_final[ALL]
+   MOLECULE = T
+   NUMBER_TO_RELEASE = rel_t_syn
+   RELEASE_PROBABILITY = 1
+  }
+  rel_atp_cons RELEASE_SITE
+  {
+   SHAPE = Scene.syn[ALL]
+   MOLECULE = atp_chan'
+   NUMBER_TO_RELEASE = rel_atp_con_cha
+   RELEASE_PROBABILITY = 1
+  }
+}
+
+sprintf(seed,"%05g",SEED)
+
+INCLUDE_FILE = "Scene.rxn_output.mdl"
+

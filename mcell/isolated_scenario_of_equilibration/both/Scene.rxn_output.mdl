@@ -1,0 +1,16 @@
+INCLUDE_FILE = "./my_seed.mdl"
+sprintf(param1,"%05g",my_se)
+
+REACTION_DATA_OUTPUT
+{
+  STEP=1e-7
+
+  {COUNT[T, Scene.inner_with_cristae_final[inner_membrane], FRONT_HITS]}=> "./react_data/param1m_" & param1 & "/T.im.dat"
+  {COUNT[T, Scene.inner_with_cristae_final[cristae_membrane], FRONT_HITS]}=> "./react_data/param1m_" & param1 & "/T.cm.dat"
+  {COUNT[T, Scene.outer_membrane_final[surface], BACK_HITS]}=> "./react_data/param1m_" & param1 & "/T.om.dat"
+  {COUNT[D, Scene.inner_with_cristae_final[inner_membrane], FRONT_HITS]}=> "./react_data/param1m_" & param1 & "/D.im.dat"
+  {COUNT[D, Scene.inner_with_cristae_final[cristae_membrane], FRONT_HITS]}=> "./react_data/param1m_" & param1 & "/D.cm.dat"
+  {COUNT[D, Scene.outer_membrane_final[surface], BACK_HITS]}=> "./react_data/param1m_" & param1 & "/D.om.dat"
+
+}
+

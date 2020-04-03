@@ -1,0 +1,11 @@
+VIZ_OUTPUT
+{
+  MODE = CELLBLENDER
+  FILENAME = "./viz_data/seed_" & seed & "/Scene"
+  MOLECULES
+  {
+    NAME_LIST {Eo L}
+    ITERATION_NUMBERS {ALL_DATA @ ALL_ITERATIONS}
+  }
+}
+

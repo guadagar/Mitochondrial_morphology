@@ -1,0 +1,65 @@
+/* DEFINE PARAMETERS */
+a12 = 24    /*    units=s-1 */
+a43 = 8e5    /*    units=M-1s-1 */
+a56 = 1e3    /*    units=s-1 */
+a45 = 1e2    /*    units=s-1 */
+a54 = 1e2    /*    units=s-1 */
+a21 = 40    /*    units=s-1 */
+a65 = 924    /*    units=s-1 */
+a34 = 1e2    /*    units=s-1 */
+a32 = 5e3    /*    units=s-1 */
+a23 = 4e6    /*    units=M-1s-1 */
+a16 = 452457    /*    units=s-1 */
+a61 = 11006    /*    units=s-1 */
+a25 = 1.17e-12    /*    units=s-1 */
+a52 = 2.0    /*    units=s-1 */
+rel_eo_mo = 1000    /*    units=number_of_proteins */
+rel_d_mo = 37739
+rel_t_mo = 500
+k1_on = 4e6
+k1_off = 100
+k2_on = 6.4e6
+k2_off = 4e4
+k5_on = 4e5
+k5_off = 200
+k6_on = 4e6
+k6_off = 4e4
+kp = 800
+kcp = 0.7
+kt = 0.58
+kd = 0.48
+rel_t_ims = 200
+rel_d_ims = 9806
+k1_2 = 2e6
+k2_2 = 3.2e6
+k5_2 = 2e5
+k6_2 = 2e6
+kpf = 1e6
+den_porin = 7100    /* number  */
+lo = 250
+lo_im = 250
+rel_dld = 1100
+rel_dld_im = 1100
+rel_dldp = 1100
+rel_dldp_im = 1100
+rel_dl = 7250
+rel_dl_im = 7250
+rel_ld = 70
+rel_ld_im = 70
+rel_tl = 150
+rel_tl_im = 150
+rel_lt = 0
+rel_lt_im = 0
+rel_dlt = 30
+rel_dlt_im = 30
+rel_tld =  50
+rel_tld_im = 50
+rel_tlt = 0
+rel_tlt_im = 0
+rel_ei = 20
+rel_h3eo = 33
+rel_h3e = 1940
+rel_eh3 = 727
+rel_h3es = 80
+rel_atp_con_cha = 7e5
+rel_t_syn = 0 

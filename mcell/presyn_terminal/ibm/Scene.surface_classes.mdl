@@ -1,0 +1,8 @@
+DEFINE_SURFACE_CLASSES
+{
+  Surface_Clamp
+  {
+    CLAMP_CONCENTRATION D, = 0.9e-3
+  }
+}
+
