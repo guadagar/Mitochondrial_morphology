@@ -5,7 +5,7 @@
 # Mitochondrial morphology provides a mechanism for energy buffering at synapses
 [DOI:10.1038/s41598-019-54159-1](https://doi.org/10.1038/s41598-019-54159-1)
 
-Welcome to the repository of the mitochondrial morphology project. This repository contains all the final code used for this publication, for the simulations and images in the paper. Other material as the electron tomogram used to generate the meshes, and the meshes themselves can be found [here](https://r3lab.uni.lu/frozen/mitochondrial-morphology-provides-a-mechanism-for-energy-buffering-at-synapses).
+Welcome to the repository of the mitochondrial morphology project. This repository contains all the final code used for this publication, for the simulations and images in the paper. Other material as the electron tomogram used to generate the meshes, and the meshes themselves can be found [here](https://doi.org/10.17881/lcsb.20190507.01).
 
 ## Folders
 
